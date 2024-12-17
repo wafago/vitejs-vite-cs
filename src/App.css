@@ -1,0 +1,142 @@
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem; /* Mengurangi padding untuk mobile */
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  height: 5em; /* Ukuran logo lebih kecil pada mobile */
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card container */
+.card {
+  padding: 1.5em;
+}
+
+/* Documentation link */
+.read-the-docs {
+  color: #888;
+}
+
+/* Portfolio section */
+.portfolio {
+  background-color: #ffffff;
+  padding: 30px 10px; /* Mengurangi padding untuk tampilan mobile */
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 1.8em; /* Ukuran font lebih kecil untuk mobile */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Portfolio cards */
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; /* Lebar 100% pada mobile */
+  max-width: 300px; /* Batas maksimum pada desktop */
+  text-align: left;
+  padding: 15px;
+  margin: 0 auto; /* Agar card di-center pada mobile */
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 180px; /* Mengurangi tinggi gambar untuk mobile */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.portfolio-card h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin: 12px 0;
+}
+
+.portfolio-card p {
+  color: #777;
+  font-size: 0.95em; /* Ukuran font lebih kecil untuk mobile */
+}
+
+/* Portfolio buttons */
+.portfolio-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Memberi jarak antar tombol pada mobile */
+  margin-top: 15px;
+}
+
+.portfolio-button,
+.youtube-button {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.9em; /* Ukuran font lebih kecil untuk mobile */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Tombol mengisi ruang di mobile */
+}
+
+.youtube-button {
+  background-color: #e74c3c;
+}
+
+.portfolio-button:hover,
+.youtube-button:hover {
+  background-color: #2c3e50;
+}
+
+/* Media query untuk mobile */
+@media (max-width: 768px) {
+  .portfolio-card {
+    width: 90%; /* Memperluas card untuk layar kecil */
+  }
+
+  .portfolio h2 {
+    font-size: 1.5em; /* Ukuran font lebih kecil pada mobile */
+  }
+
+  .logo {
+    height: 4em; /* Mengurangi ukuran logo pada mobile */
+  }
+}
